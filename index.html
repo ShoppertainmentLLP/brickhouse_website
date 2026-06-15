@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0B">
 <title>Brick House — Lifestyle &amp; Performance Gym · Pune</title>
 <meta name="description" content="Brick House is a lifestyle & performance gym in Pune. Flexible training programs for everyone — a new workout every day. Eat. Train. Recover.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +17,20 @@
 <!-- ═══════════ NAV ═══════════ -->
 <nav class="nav">
   <a href="#top" class="nav-logo">Brick<span class="accent">House</span></a>
-  <ul class="nav-links">
-    <li><a href="#method">Method</a></li>
-    <li><a href="#training">Training</a></li>
-    <li><a href="#facility">Facility</a></li>
-    <li><a href="#membership">Membership</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="btn btn-primary nav-cta">Inquire now</a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+  <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation menu">
+    <span></span><span></span><span></span>
+  </label>
+  <div class="nav-menu">
+    <ul class="nav-links">
+      <li><a href="#method">Method</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#facility">Facility</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary nav-cta">Inquire now</a>
+  </div>
 </nav>
 
 <!-- ═══════════ HERO ═══════════ -->
@@ -243,6 +250,14 @@
     <div class="footer-copy">Brick House &middot; Lifestyle &amp; Performance &middot; &copy; 2026 Seth Enterprises. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+  // Close the mobile menu after tapping a link
+  var navToggle = document.getElementById('nav-toggle');
+  document.querySelectorAll('.nav-menu a').forEach(function (link) {
+    link.addEventListener('click', function () { navToggle.checked = false; });
+  });
+</script>
 
 </body>
 </html>
