@@ -39,12 +39,24 @@
 <header class="hero" id="why">
   <div class="container">
     <span class="kicker">Lifestyle &amp; Performance</span>
-    <h1 class="h-xl">
-      <span>Eat.</span>
-      <span>Train.</span>
-      <span class="accent">Recover.</span>
-    </h1>
-    <p class="lead">Fitness isn&rsquo;t about looking better &mdash; it&rsquo;s about living better. Build the strength, energy and resilience to enjoy an active, fulfilling life for years to come.</p>
+    <div class="hero-rotator">
+      <div class="hero-slide is-active">
+        <h1 class="h-xl">
+          <span>Eat.</span>
+          <span>Train.</span>
+          <span class="accent">Recover.</span>
+        </h1>
+        <p class="lead">Fitness isn&rsquo;t about looking better &mdash; it&rsquo;s about living better. Build the strength, energy and resilience to enjoy an active, fulfilling life for years to come.</p>
+      </div>
+      <div class="hero-slide">
+        <h1 class="h-xl">
+          <span>Strength.</span>
+          <span class="accent">Performance.</span>
+          <span>Longevity.</span>
+        </h1>
+        <p class="lead">Three pillars. One standard. We train for complete human performance &mdash; not just how you look, but how you move, feel and live for years to come.</p>
+      </div>
+    </div>
     <div class="btn-row">
       <a href="#how" class="btn btn-primary">Explore training <i class="fa-solid fa-arrow-right"></i></a>
       <a href="#cost" class="btn btn-ghost">View membership</a>
@@ -377,6 +389,17 @@
   document.querySelectorAll('.nav-menu a').forEach(function (link) {
     link.addEventListener('click', function () { navToggle.checked = false; });
   });
+
+  // Auto-rotate the hero headline every few seconds
+  var slides = document.querySelectorAll('.hero-slide');
+  if (slides.length > 1) {
+    var current = 0;
+    setInterval(function () {
+      slides[current].classList.remove('is-active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('is-active');
+    }, 5000);
+  }
 </script>
 
 </body>

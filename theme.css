@@ -147,6 +147,21 @@ img, svg { max-width: 100%; display: block; }
 .hero h1 { margin-bottom: 1.5rem; }
 .hero h1 span { display: block; }
 .hero .lead { margin-bottom: 2.25rem; }
+
+/* Rotating hero text — slides stack in one grid cell and crossfade */
+.hero-rotator { display: grid; }
+.hero-slide {
+  grid-area: 1 / 1; opacity: 0; visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .7s ease, transform .7s ease, visibility 0s linear .7s;
+}
+.hero-slide.is-active {
+  opacity: 1; visibility: visible; transform: translateY(0);
+  transition: opacity .7s ease, transform .7s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { transition: opacity .3s ease; transform: none; }
+}
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* Hero stats */
