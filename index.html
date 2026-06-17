@@ -8,7 +8,7 @@
 <meta name="description" content="27 Brick House is a lifestyle & performance gym in Pune. Built on three pillars — Strength, Performance, Longevity. Train for complete human performance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@500;600;700&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="theme.css">
 </head>
@@ -16,7 +16,10 @@
 
 <!-- ═══════════ NAV ═══════════ -->
 <nav class="nav">
-  <a href="#why" class="nav-logo">27 Brick<span class="accent">House</span></a>
+  <a href="#why" class="nav-logo" aria-label="27 Brick House — Lifestyle and Performance">
+    <span class="brand-word">27 Brick House</span>
+    <span class="brand-bar" aria-hidden="true"><i class="plate"></i><i class="bar"></i><i class="plate"></i></span>
+  </a>
   <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
   <label for="nav-toggle" class="nav-burger" aria-label="Toggle navigation menu">
     <span></span><span></span><span></span>
@@ -368,7 +371,12 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">27 Brick<span class="accent">House</span></div>
+      <div class="footer-logo">
+        <span class="fl-est">Est. 2018</span>
+        <span class="fl-word">27 Brick House</span>
+        <span class="brand-bar" aria-hidden="true"><i class="plate"></i><i class="bar"></i><i class="plate"></i></span>
+        <span class="fl-tag">Lifestyle &amp; Performance</span>
+      </div>
       <div class="footer-links">
         <a href="#why">Why</a>
         <a href="#who">Who</a>

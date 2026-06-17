@@ -111,10 +111,17 @@ img, svg { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--line);
 }
 .nav-logo {
-  font-family: var(--display); font-size: 22px; letter-spacing: .02em;
-  text-transform: uppercase; color: var(--text); text-decoration: none;
+  display: inline-flex; flex-direction: column; align-items: center; gap: 4px;
+  text-decoration: none; line-height: 1;
 }
-.nav-logo .accent { color: var(--volt); }
+.brand-word {
+  font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 18px;
+  letter-spacing: .05em; color: var(--text); white-space: nowrap;
+}
+/* Barbell bar — the volt accent rule (shared nav + footer) */
+.brand-bar { display: flex; align-items: center; width: 100%; }
+.brand-bar .bar { flex: 1; height: 2px; background: var(--volt); }
+.brand-bar .plate { width: 3px; height: 9px; border-radius: 2px; background: var(--volt); margin: 0 2px; }
 .nav-menu { display: flex; align-items: center; gap: 1.5rem; margin-left: auto; }
 .nav-links { display: flex; gap: 1.5rem; list-style: none; }
 .nav-links a {
@@ -361,8 +368,10 @@ img, svg { max-width: 100%; display: block; }
    ============================================================ */
 .footer { border-top: 1px solid var(--line); padding: clamp(2.5rem, 5vw, 3.5rem) 0; background: var(--bg-2); }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-.footer-logo { font-family: var(--display); font-size: 20px; text-transform: uppercase; color: var(--text); }
-.footer-logo .accent { color: var(--volt); }
+.footer-logo { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; line-height: 1; }
+.fl-est { font-family: var(--cond); font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--text-3); }
+.fl-word { font-family: 'Cinzel', Georgia, serif; font-weight: 600; font-size: 21px; letter-spacing: .06em; color: var(--text); }
+.fl-tag { font-family: var(--cond); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--volt); }
 .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .footer-links a { font-family: var(--cond); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); text-decoration: none; transition: color .15s; }
 .footer-links a:hover { color: var(--volt); }
