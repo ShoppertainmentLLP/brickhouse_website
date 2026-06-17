@@ -244,7 +244,7 @@ img, svg { max-width: 100%; display: block; }
 /* ============================================================
    Program cards — detailed
    ============================================================ */
-.programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 20px; }
+.programs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .prog {
   display: flex; flex-direction: column; overflow: hidden;
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
