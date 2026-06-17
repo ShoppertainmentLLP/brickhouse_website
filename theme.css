@@ -121,7 +121,11 @@ img, svg { max-width: 100%; display: block; }
 /* Barbell bar — the volt accent rule (shared nav + footer) */
 .brand-bar { display: flex; align-items: center; width: 100%; }
 .brand-bar .bar { flex: 1; height: 2px; background: var(--volt); }
-.brand-bar .plate { width: 3px; height: 9px; border-radius: 2px; background: var(--volt); margin: 0 2px; }
+.brand-bar .plate { width: 3px; border-radius: 2px; background: var(--volt); margin: 0 1.5px; }
+.brand-bar .p1 { height: 6px; }
+.brand-bar .p2 { height: 9px; }
+.brand-bar .p3 { height: 13px; }
+.brand-bar .p3 + .bar { margin: 0 1px; }
 .nav-menu { display: flex; align-items: center; gap: 1.5rem; margin-left: auto; }
 .nav-links { display: flex; gap: 1.5rem; list-style: none; }
 .nav-links a {
